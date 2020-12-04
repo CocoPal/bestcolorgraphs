@@ -1,0 +1,86 @@
+---
+title: "MyPackage"
+author: "Sarah Palacios"
+date: "12/4/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+install.packages("devtools")
+install.packages("roxygen2")
+
+library(devtools)
+library(roxygen2)
+library(ggplot2)
+```
+
+
+```{r, eval = FALSE}
+setwd("./bestcolorgraphs")
+```
+
+
+```{r}
+
+theme_purple <- function() {
+theme(panel.border = element_rect(color = "purple", fill = NA, linetype = 2),
+panel.background = element_rect(fill = "lavenderblush"),
+axis.text = element_text(color = "purple4", face = "italic", family = "Georgia", size = 9),
+axis.title = element_text(color = "purple4", face = "bold", family = "Georgia", size = 10),
+plot.title = element_text(color = "purple4",  face = "bold", family = "Georgia", size = 12, margin = margin(b = 10, t = 5)), 
+legend.title = element_text(color = "purple4", face = "bold", family = "Georgia", size = 9),
+legend.text = element_text(color = "purple4", family = "Georgia", size = 8))
+}
+
+theme_blue <- function() {
+theme(panel.border = element_rect(color = "royalblue", fill = NA, linetype = 2),
+panel.background = element_rect(fill = "slategray1"),
+axis.text = element_text(color = "royalblue4", face = "italic", family = "Georgia", size = 9),
+axis.title = element_text(color = "royalblue4", face = "bold", family = "Georgia", size = 10),
+plot.title = element_text(color = "royalblue4",  face = "bold", family = "Georgia", size = 12, margin = margin(b = 10, t = 5)), 
+legend.title = element_text(color = "royalblue4", face = "bold", family = "Georgia", size = 9),
+legend.text = element_text(color = "royalblue4", family = "Georgia", size = 8))
+}
+```
+
+
+```{r, eval = FALSE}
+use_r("theme_purple")
+use_r("theme_blue")
+```
+
+
+```{txt}
+#' Purple theme for ggplot2
+#'
+#' This is a complete theme which controls all non-data display.
+#'
+#' @param ... arguments passed to function
+#' @rdname theme_purple
+#' @export
+
+#' Blue theme for ggplot2
+#'
+#' This is a complete theme which controls all non-data display.
+#' 
+#' @param ... arguments passed to function
+#' @rdname theme_purple
+#' @export
+```
+
+
+```{r document-theme_purple, eval = FALSE}
+document()
+```
+
+
+```{r document-theme_blue, eval = FALSE}
+document()
+```
+
+
+```{r}
+?theme_purple
+```

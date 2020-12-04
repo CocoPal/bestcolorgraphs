@@ -1,0 +1,15 @@
+Package: bestcolorgraphs
+Title: bestcolorgraphs
+Version: 1.0
+Authors@R: 
+    person(given = "Coco",
+           family = "Palacios",
+           role = c("aut", "cre"),
+           email = "coco.palacios14@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: These are complete themes which control all non-data display.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
